@@ -1,0 +1,40 @@
+### FONTS
+#FONT1="PragmataPro-14"
+FONT1="Terminus:size=14:style=Bold"
+FONT2="Terminus:size=12:style=Bold"
+FONT3="FontAwesome:size=12"
+FONT4="Terminus:size=8:style=Bold"
+PANEL_HEIGHT=28
+PANEL_MARGIN=12
+GEOMETRY="$((1920-($PANEL_MARGIN*2)))x${PANEL_HEIGHT}+${PANEL_MARGIN}+${PANEL_MARGIN}"
+
+### COLORS
+FG="#CAC9C6"
+BG="#2E2F33"
+LIGHT1="#B8B7B5"
+LIGHT2="#B8B7B5"
+LIGHT3="#A2A7B5"
+LIGHT4="#878B97"
+YELLOW="#F7B646"
+ORANGE="#EF933F"
+BLUE="#4887BB"
+GREEN="#98A81D"
+
+### LEMONBAR FORMATTED
+fg='%{F#ffCAC9C6}'
+bg='%{F#ff2E2F33}'
+orange='%{F#ffEF933F}'
+yellow='%{F#ffF7B646}'
+red='%{F#ffCE5239}'
+green='%{F#ff98A81D}'
+blue='%{F#ff4887BB}'
+darkblue='%{F#ff3973A3}'
+
+light1='%{F#ffC9C9C6}'
+light2='%{F#ffB8B7B5}'
+light3='%{F#ffA2A7B5}'
+light4='%{F#ff878B97}'
+
+### OTHER
+#volbar="━"
+volbar="\uf068"
