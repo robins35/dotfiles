@@ -1,0 +1,7 @@
+#! /bin/sh
+
+# START LEMONBAR
+# ~/.config/dwm/lemonbarstart.sh &
+
+# SERVICES START HERE
+tmux new -s 'rtorrent' -d 'rtorrent'

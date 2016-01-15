@@ -1,7 +1,7 @@
 set number
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 " Whitespace
@@ -29,7 +29,20 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 execute pathogen#infect()
 filetype plugin indent on
 
-autocmd VimEnter * NERDTree
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='powerlineish'
+let g:airline_theme='dark'
+
 let g:NERDTreeShowHidden=1
 let g:airline_powerline_fonts=1
 nmap <silent> <F3> :NERDTreeToggle<CR>
+
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
