@@ -70,8 +70,8 @@ if [[ $TERM = "linux" ]]; then
 fi
 
 # Use powerline in zsh
-if [[ -r ~/.local/lib64/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-  source ~/.local/lib64/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  source ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 # You may need to manually set your language environment
