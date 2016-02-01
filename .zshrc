@@ -5,7 +5,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,14 +55,14 @@ plugins=(git colored-man colorize zsh-syntax-highlighting ruby sprunge)
 
   export PATH="$HOME/.local/bin:$PATH"
   export PATH="$HOME/bin:$PATH"
-  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/chruby/chruby.sh
 
 # Use powerline in zsh
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-  source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  source ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 # You may need to manually set your language environment
