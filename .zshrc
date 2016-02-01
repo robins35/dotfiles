@@ -55,14 +55,23 @@ plugins=(git colored-man colorize zsh-syntax-highlighting ruby sprunge)
 
   export PATH="$HOME/.local/bin:$PATH"
   export PATH="$HOME/bin:$PATH"
-  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+  export PATH="/usr/lib64/qt5/bin/:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+chruby ruby-2.3.0
+
+if [[ $TERM = "linux" ]]; then
+  unicode_start
+fi
 
 # Use powerline in zsh
-if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-  source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r ~/.local/lib64/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  source ~/.local/lib64/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 # You may need to manually set your language environment

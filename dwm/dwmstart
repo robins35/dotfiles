@@ -1,11 +1,7 @@
 #! /bin/bash
-feh --bg-scale Pictures/forest-patrol.jpg &
+feh --bg-scale ~/Pictures/forest-patrol.jpg &
 
-#conky | while read LINE; do
-#  xsetroot -name "$LINE | Vol. $(awk '/dB/ { gsub(/[\[\]]/,""); print $4}' <(amixer get Master)) \
-#    | $(date +"%a, %b %d %R")"
-#done &
-
+compton &
 ~/.config/dwm/lemonbarstart.sh &
 
 exec dwm
