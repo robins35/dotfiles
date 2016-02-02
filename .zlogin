@@ -1,0 +1,1 @@
+/home/scriptonaut/.zprezto/runcoms/zlogin

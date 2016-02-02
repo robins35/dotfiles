@@ -1,1 +1,1 @@
-eval `ssh-agent`
+/home/scriptonaut/.zprezto/runcoms/zprofile
