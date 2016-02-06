@@ -1,15 +1,27 @@
 [user]
   name = robins35
-  email = caiden@brivity.com
+  email = caiden.robinson35@gmail.com
 [alias]
+  s = status
   b = branch
   br = branch
   c = commit
   co = checkout
+  cp = cherry-pick
+  fo = fetch origin
+  fa = fetch --all
+  d = diff
   dc = diff --cached
   lg = log --graph --oneline --decorate --color --all
   me = merge
   pr = pull --rebase
   put = push origin HEAD
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 [core]
   excludesfile = ~/.gitignore
