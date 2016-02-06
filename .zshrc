@@ -1,6 +1,7 @@
-# export PATH="$HOME/.local/bin:$PATH"
-# export PATH="$HOME/bin:$PATH"
-# export PATH="/usr/lib64/qt5/bin/:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/usr/lib64/qt5/bin/:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
