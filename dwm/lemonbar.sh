@@ -43,12 +43,14 @@ clock() {
 system_stats() {
   CPU1="$(grep 'cpu0 ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage }' | awk -F. '{print $1}')"
   CPU2="$(grep 'cpu1 ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage }' | awk -F. '{print $1}')"
+  CPU3="$(grep 'cpu2 ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage }' | awk -F. '{print $1}')"
+  CPU4="$(grep 'cpu3 ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage }' | awk -F. '{print $1}')"
   MEM="$(free | grep Mem | awk '{print ($3/$2) * 100}' | awk -F. '{print $1}')"
 
   CPU_ICON="\uf108"
   MEM_ICON="\uf0a0"
 
-  echo "${yellow}${CPU_ICON} $CPU1%  ${CPU_ICON} $CPU2%  ${blue}${MEM_ICON} $MEM%"
+  echo "${yellow}${CPU_ICON} $CPU1%  ${CPU_ICON} $CPU2%  ${CPU_ICON} $CPU3%  ${CPU_ICON} $CPU4%  ${blue}${MEM_ICON} $MEM%"
 }
 
 cmus_info() {
@@ -65,6 +67,6 @@ sep() {
 }
 
 while :; do
-  echo -e "%{l}  $(system_stats)$(sep)$(sep)$(sep)$(cmus_info)%{l}%{r}$(volume_bar) $(sep) $(calendar)   ${light2}$(clock) %{r}"
+  echo -e "%{l}  $(system_stats)$(sep)$(cmus_info)%{l}%{r}$(volume_bar) $(sep) $(calendar)   ${light2}$(clock) %{r}"
   sleep 0.2s
 done
