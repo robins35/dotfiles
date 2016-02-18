@@ -4,6 +4,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+set ff=unix
+
 " Whitespace
 set list
 set listchars=nbsp:¬,tab:»·,trail:˷
