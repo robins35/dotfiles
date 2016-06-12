@@ -72,4 +72,3 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-eval $(keychain --eval id_rsa)

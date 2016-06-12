@@ -10,7 +10,7 @@ fi
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-chruby ruby-2.3.0
+chruby ruby-2.3.1
 
 if [[ $TERM = "linux" ]]; then
   unicode_start
