@@ -1,7 +1,0 @@
-#! /bin/bash
-feh --bg-scale ~/Pictures/forest-patrol.jpg &
-
-compton &
-~/.config/dwm/lemonbarstart.sh &
-
-exec dwm
