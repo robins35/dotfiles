@@ -23,6 +23,12 @@ nnoremap <C-L> <C-W><C-L>
 
 nnoremap <F4> <C-W>-
 nnoremap <F5> <C-W>+
+nnoremap <F6> <C-W><
+nnoremap <F7> <C-W>>
+
+" vim-rspec mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
 
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -48,3 +54,36 @@ set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
+
+let g:rails_projections = {
+  \ "app/assets/javascripts/*.coffee": {
+  \    "command": "coffee"
+  \ },
+  \ "app/decorators/*_decorator.rb": {
+  \    "command": "decorator"
+  \ },
+  \ "app/interactions/*.rb": {
+  \    "command": "activeinteraction"
+  \ },
+  \ "app/observers/*_observer.rb": {
+  \    "command": "observer"
+  \ },
+  \ "app/presenter/*_presenter.rb": {
+  \    "command": "presenter"
+  \ },
+  \ "spec/features/*_spec.rb": {
+  \    "command": "feature"
+  \ },
+  \ "features/pages/*_page.rb": {
+  \    "command": "page"
+  \ },
+  \ "features/step_definitions/*_steps.rb": {
+  \    "command": "step"
+  \ },
+  \ "spec/support/*.rb": {
+  \    "command": "support"
+  \ },
+  \ "spec/factories/*_factory.rb": {
+  \    "command": "factory",
+  \    "template": "FactoryGirl.define do\n  \nend"
+  \ }}

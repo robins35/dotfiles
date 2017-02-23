@@ -13,6 +13,7 @@
   d = diff
   dc = diff --cached
   lg = log --graph --oneline --decorate --color --all
+  lol = log --graph --oneline --decorate --color --all
   me = merge
   pr = pull --rebase
   put = push origin HEAD
