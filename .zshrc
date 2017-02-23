@@ -29,6 +29,7 @@ export TERM="screen-256color"
 DEFAULT_USER=`whoami`
 
 export GIT_EDITOR=vim
+export LESS="-RX"
 
 # Add env.sh
 . ~/.env.sh

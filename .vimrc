@@ -30,6 +30,9 @@ nnoremap <F7> <C-W>>
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 
+" grep for word under cursor
+nnoremap <Leader>f :grep <cword> -r app lib config features spec vendor<CR><CR><CR>
+
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

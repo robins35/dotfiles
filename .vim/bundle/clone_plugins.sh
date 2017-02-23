@@ -12,3 +12,4 @@ git clone git://github.com/tpope/vim-projectionist.git
 git clone git://github.com/tpope/vim-rake.git
 git clone git://github.com/tpope/vim-commentary.git
 git clone git@github.com:thoughtbot/vim-rspec.git
+git clone git://github.com/vim-ruby/vim-ruby.git
