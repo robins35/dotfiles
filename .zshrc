@@ -12,7 +12,7 @@ plugins=(git bundler rails rake ruby)
 HYPHYEN_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMP="mm/dd/yyyy"
-ENABLE_CORRECTION="true"
+DISABLE_CORRECTION="true"
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -37,6 +37,7 @@ export TERM="screen-256color"
 DEFAULT_USER=`whoami`
 
 export GIT_EDITOR=vim
+export LESS="-RX"
 
 # Add env.sh
 . ~/.env.sh
