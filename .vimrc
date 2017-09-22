@@ -33,9 +33,25 @@ map <Leader>s :call RunNearestSpec()<CR>
 " grep for word under cursor
 nnoremap <Leader>f :grep <cword> -r app lib config features spec vendor<CR><CR><CR>
 
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+" hi CursorLine ctermbg=green ctermfg=white cterm=bold guibg=green guifg=white gui=bold
+" hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+set cursorline " cursorcolumn
+
+" Set column to dark red at 80 chars
+if (exists('+colorcolumn'))
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=88
+endif
+
+" Source .vimrc when changes are made to it
+augroup myvimrc
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+" VimFugitive: git bindings
+cabbrev gs Gstatus
+cabbrev gd Gdiff
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -89,4 +105,28 @@ let g:rails_projections = {
   \ "spec/factories/*_factory.rb": {
   \    "command": "factory",
   \    "template": "FactoryGirl.define do\n  \nend"
+  \ },
+  \ "app/workers/*_worker.rb": {
+  \    "command": "worker"
+  \ },
+  \ "client/app/bundles/Signup/actions/*Action*.jsx": {
+  \    "command": "raction"
+  \ },
+  \ "client/app/*/*/components/*.jsx": {
+  \    "command": "rcomponent"
+  \ },
+  \ "client/app/*/*/constants/*Constants.jsx": {
+  \    "command": "rconstant"
+  \ },
+  \ "client/app/*/*/containers/*Container.jsx": {
+  \    "command": "rcontainer"
+  \ },
+  \ "client/app/*/*/reducers/*Reducer.jsx": {
+  \    "command": "rreducer"
+  \ },
+  \ "client/app/*/*/startup/*.jsx": {
+  \    "command": "rstartup"
+  \ },
+  \ "client/app/*/*/store/*Store.jsx": {
+  \    "command": "rstore"
   \ }}

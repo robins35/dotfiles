@@ -6,3 +6,4 @@ alias pbpaste='xclip -selection clipboard -o'
 alias sprunge='curl -F "sprunge=<-" http://sprunge.us'
 alias xr='xvfb-run'
 alias gist-paste='gist-paste -p'
+alias code="tmux attach -t"
