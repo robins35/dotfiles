@@ -11,7 +11,7 @@ fi
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-chruby ruby-2.3.0
+chruby ruby-2.6.5
 
 if [[ $TERM = "linux" ]]; then
   unicode_start
@@ -20,6 +20,11 @@ fi
 # Use powerline in zsh
 if [[ -r ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
   source ~/.local/lib/python3.4/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
+# Use powerline in zsh
+if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
+  source /usr/share/powerline/bindings/zsh/powerline.zsh
 fi
 
 # aliases

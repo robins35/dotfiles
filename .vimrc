@@ -51,6 +51,8 @@ let g:airline_powerline_fonts=1
 nmap <silent> <F3> :NERDTreeToggle<CR>
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=$HOME/.local/lib64/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=/usr/share/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
